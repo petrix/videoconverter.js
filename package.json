@@ -2,15 +2,39 @@
     "name": "videoconverter",
     "description": "videoconverter.js - port of ffmpeg with emscripten",
     "version": "0.1.0",
-    "keywords": ["video", "videoconverter", "ffmpeg", "emscripten"],
+    "scripts": {
+        "build": "browserify public/assets/index.js -t scssify > public/bundle.js",
+        "public": "watchify public/assets/public.js -t scssify -o public/bundlePublic.js",
+        "config": "watchify public/assets/config.js -t scssify -o public/bundleConfig.js"
+      },
+    "keywords": [
+        "video",
+        "videoconverter",
+        "ffmpeg",
+        "emscripten"
+    ],
     "homepage": "http://bgrins.github.io/videoconverter.js/",
     "repository": {
         "type": "git",
         "url": "https://github.com/bgrins/videoconverter.js/"
     },
     "author": {
-        "name" : "Brian Grinstead",
-        "email" : "briangrinstead@gmail.com",
-        "url" : "http://briangrinstead.com/"
+        "name": "Brian Grinstead",
+        "email": "briangrinstead@gmail.com",
+        "url": "http://briangrinstead.com/"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "browserify": "^16.5.0",
+        "scssify": "^3.0.1",
+        "uglify-js": "^3.7.5",
+        "watchify": "^3.11.1"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "jquery": "^3.3.1",
+        "moment": "^2.24.0",
+        "socket.io-client": "^2.3.0",
+        "colour": "^0.7.1"
     }
 }

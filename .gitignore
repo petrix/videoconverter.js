@@ -1,3 +1,4 @@
+node_modules
 .DS_Store
 thumbs.db
 *.bc
@@ -42,3 +43,4 @@ build/zlib/example
 build/zlib/example64
 build/zlib/minigzip
 build/zlib/minigzip64
+node_modules
